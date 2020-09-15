@@ -16,10 +16,10 @@
 root/
 　├ src/
 　│　├ js/
-　｜　├ scss/**
+　│　├ scss/**
 　├ dist/
 　│　├ js/bundle.min.js
-　｜　├ css/style.min.css
+　│　├ css/style.min.css
 ```
 ## 注意
 - `babel-plugin-transform-runtime`を入れていないとエラーが出るかもしれない
