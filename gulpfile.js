@@ -1,12 +1,11 @@
-// pulg-in
 const gulp = require("gulp");
 // gulp-minify-cssが非推奨になり、gulp-clean-cssを使用するようアナウンスが出ている
 // https://www.npmjs.com/package/gulp-minify-css
-const sass = require("gulp-sass");
+const sass = require("gulp-sass"); // sassを使えるようにする
 const sassGlob = require("gulp-sass-glob"); // 複数のimport文をまとめる
 const changed = require("gulp-changed");
-const imagemin = require("gulp-imagemin");
-const browserSync = require("browser-sync");
+const imagemin = require("gulp-imagemin"); // 画像を圧縮する
+const browserSync = require("browser-sync"); // ファイル変更時にブラウザを自動リロードする
 const plumber = require("gulp-plumber"); // エラーが発生しても強制終了させない
 const notify = require("gulp-notify"); // エラー発生時のアラート出力
 const postcss = require("gulp-postcss"); // PostCSS利用
@@ -15,10 +14,10 @@ const sourcemaps = require("gulp-sourcemaps"); // ソースマップ作成
 const uglify = require("gulp-uglify"); // jsファイルを圧縮する
 const stripDebug = require("gulp-strip-debug"); // console.logやalertを削除する
 const rename = require("gulp-rename"); // ファイル名を変更するプラグインを追加
-const browserify = require("browserify");
+const browserify = require("browserify"); // jsファイルなどビルドする
 const babelify = require("babelify"); // babelify は Browserify 用の Babel 変換ライブラリ
 const source = require("vinyl-source-stream"); // gulpで使用するvinylオブジェクトに変換するためのもの。Browserify を扱う際に利用する
-const gulp_connect = require("gulp-connect-php");
+const gulp_connect = require("gulp-connect-php"); // phpを扱えるようにする
 const streamify = require("gulp-streamify"); // gulpでストリームモードを利用できるようにする
 
 // ファイルパスを予め設定
