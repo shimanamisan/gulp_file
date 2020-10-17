@@ -94,7 +94,7 @@ const sass_Build = function (done) {
     .src(paths.srcDir + "/scss/**/*.scss")
     .pipe(sassGlob())
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-    // {outputStyle: 'compressed'}はgulp-sassのオプションで出力ファイルを圧縮している
+    // {outputStyle: 'compressed'} はgulp-sassのオプションで出力ファイルを圧縮している
     // https://www.npmjs.com/package/gulp-sass
     .pipe(postcss([autoprefixer()]))
     .pipe(
@@ -115,17 +115,17 @@ const sass_Build = function (done) {
   done();
 };
 
-//画像圧縮
-//圧縮前と圧縮後のディレクトリを定義
+// 画像圧縮
+// 圧縮前と圧縮後のディレクトリを定義
 // jpg, png, gif画像の圧縮タスク
 // gulp-imageminのバージョンアップによるでるエラー：imagemin.jpegtran is not a function
 // imagemin.jpegtran()をimagemin.mozjpeg()に変更
 const img_Build = function (done) {
-  var srcGlob = paths.srcDir + "/img/*.+(jpg|jpeg|png|gif)"; // /**/ で、その配下の全部のディレクトリを見に行く
+  var srcGlob = paths.srcDir + "/img/*.+(jpg|jpeg|png|gif|svg)"; // /**/ で、その配下の全部のディレクトリを見に行く
   var dstGlob = paths.dstDir + "/img";
   gulp
     .src(srcGlob)
-    //gulp-changedというライブラリは、読込み元と保存先のディレクトリの差分を確認して、画像圧縮を実行するか判断するもの
+    // gulp-changedというライブラリは、読込み元と保存先のディレクトリの差分を確認して、画像圧縮を実行するか判断するもの
     .pipe(changed(dstGlob))
     .pipe(
       imagemin([
@@ -146,6 +146,8 @@ const php_serve = function () {
       base: "./dist/",
       livereload: true,
       port: 8001,
+      bin: "C:/xamp/php/php.exe",
+      ini: "C:/xamp/php/php.ini",
     },
     function () {
       browserSync.init({
@@ -162,7 +164,7 @@ const php_serve = function () {
 
   // ファイルが更新（ビルド）されたらリロードする
   gulp.watch(paths.dstDir + "/js/*.js").on("change", browserSync.reload);
-  // gulp.watch(paths.dstDir + "/css/*.css").on("change", browserSync.reload);
+  gulp.watch(paths.dstDir + "/css/*.css").on("change", browserSync.reload);
 
   gulp.watch("./dist/*.html").on("change", browserSync.reload);
   gulp.watch("./dist/*.php").on("change", browserSync.reload);
