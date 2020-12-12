@@ -146,8 +146,6 @@ const php_serve = function () {
       base: "./dist/",
       livereload: true,
       port: 8001,
-      bin: "C:/xamp/php/php.exe",
-      ini: "C:/xamp/php/php.ini",
     },
     function () {
       browserSync.init({
@@ -165,9 +163,13 @@ const php_serve = function () {
   // ファイルが更新（ビルド）されたらリロードする
   gulp.watch(paths.dstDir + "/js/*.js").on("change", browserSync.reload);
   gulp.watch(paths.dstDir + "/css/*.css").on("change", browserSync.reload);
-
+  
+  // html,phpファイルが更新されたらリロードする
   gulp.watch("./dist/**/*.html").on("change", browserSync.reload);
   gulp.watch("./dist/**/*.php").on("change", browserSync.reload);
+  
+  
+  
 };
 
 // gulp コマンドで下記のタスクが実行される
