@@ -1,0 +1,45 @@
+
+.top {
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-logo{
+            width: 100px;
+            height: 80px;
+        }
+    }
+}
+
+// object-fit は IE Eddge非対応なので、基本的に対応していないブラウザがあれば現場では使用しない
+.header-nav-list{
+    display: flex;
+    &-item{
+        margin: 0 20px;
+    }
+}
+
+.top-img{
+    height: 500px;
+    background-image: url(http://placehold.jp/150x50.png);
+}
+
+.top-img .container{
+    position: relative;
+    height: 100%;
+}
+
+.copy {
+    position: absolute;
+    left: 0;
+    bottom: 56px;
+
+    &-en{
+        margin-bottom: 10px;
+    }
+}
+
+
+.top-newa{
+    padding-top: 100px;
+}
