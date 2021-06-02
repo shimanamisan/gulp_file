@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css" />
-    <title>Document</title>
-  </head>
+<?php
+require "head.php"
+?>
+
   <body>
     <header class="top-header">
       <h1 class="top-header-logo">ロゴ</h1>
@@ -16,14 +10,14 @@
         <li class="header-nav-list-item">事業内容</li>
         <li class="header-nav-list-item">採用情報</li>
         <li class="header-nav-list-item">会社概要</li>
-        <li class="header-nav-list-item">お問い合わせ</li>
+        <li class="header-nav-list-item"><a href="./contact.php">お問い合わせ</a></li>
       </ul>
     </header>
     <main>
       <div class="top-img">
         <div class="container">
           <div class="copy">
-            <p class="copy-en">egfvbsdfbsdfbsbdsffb</p>
+            <p class="copy-en">あああああああああああああああ</p>
             <p class="copy-jp">すべての人に選択の自由を</p>
           </div>
         </div>
@@ -37,6 +31,7 @@
         </div>
       </section>
     </main>
-    <script src="js/bundle.min.js"></script>
-  </body>
-</html>
+
+    <?php
+require "footer.php"
+?>

@@ -1,5 +1,7 @@
 const $ = require("jquery");
 
+console.log('jQueryを読み込んでいます。。。')
+
 $(function () {
-    console.log('jQueryを読み込んでいます。。。')
+    
 })

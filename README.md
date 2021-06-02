@@ -1,5 +1,7 @@
-# gulp_file
-コーディング用の環境設定をまとめたリポジトリです。
+# Web制作用にカスタマイズしたGulp.js
+- コーディング用の環境設定をまとめたリポジトリです
+- PHPファイルを編集した際の自動リロードにも対応しています
+- サンプルファイルとして、お問い合わせページ、画像アップローダーを作成しています
 
 ## 実行環境
 - Windows10
@@ -9,12 +11,11 @@
 
 ※Macでもインストールすべきものは同じ
 
-
 ## 初期設定
 - `node.js`がインストールされていること
 - 必要であれば`yarn`をインストールしておく
 
-### ディレクトリ構成
+## ディレクトリ構成
 ```
 root/
 　├ src/
@@ -45,3 +46,24 @@ root/
 ```
 - `babelify`により`browserify`と連携して、ES6の記述のJavaScriptもバンドルして対応する
     - `@babel/preset-env`、`@babel/core`が必要
+
+# 追加
+- **bootstrap5**を導入
+
+## インストール方法
+
+- `yarn`を使用してインストールします
+
+```sh
+yarn add bootstrap 
+```
+
+##  bootstrap.scssをインポートする
+
+- ディレクトリ構成に注意する
+
+```scss
+@import '../../node_modules/bootstrap/scss/bootstrap.scss'; // 追記する
+@import 'foundation/**';
+@import 'layout/**';
+```

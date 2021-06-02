@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier" : "prettier --write ./dist/index.html"
+    "prettier": "prettier --write ./dist/index.html"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-changed": "^4.0.2",
+    "gulp-cli": "^2.3.0",
     "gulp-connect-php": "^1.0.3",
     "gulp-imagemin": "^7.1.0",
     "gulp-notify": "^3.2.0",
@@ -37,6 +38,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "bootstrap": "^5.0.1",
     "jquery": "^3.5.1"
   },
   "browserslist": [
