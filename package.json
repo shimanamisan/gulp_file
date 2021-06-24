@@ -38,7 +38,8 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "bootstrap": "^5.0.1",
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.2",
     "jquery": "^3.5.1"
   },
   "browserslist": [

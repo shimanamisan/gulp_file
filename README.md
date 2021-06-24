@@ -28,7 +28,7 @@ root/
 
 ## 機能
 - `browser-sync`をPHPファイルにも対応
-- `gulp-sass-glob`により`scss`ファイルのインポートを短い記述でまとめる
+- `gulp-sass-glob`により`scss`ファイルのインポートを短い記述でまとめる事もできる
 ```scss
 // gulp-sass-glob導入前
 @import "layout/_main";
@@ -36,8 +36,8 @@ root/
 @import "foundation/_base";
 @import "foundation/_mixin";
 @import "object/component/_sample";
-@import "object/component/project/_test";
-@import "object/component/project/_test2";
+@import "object/project/_test";
+@import "object/project/_test2";
 
 // gulp-sass-glob導入後
 @import "layout/**";
@@ -58,12 +58,11 @@ root/
 yarn add bootstrap 
 ```
 
-##  bootstrap.scssをインポートする
+## style.scss に bootstrap.scssをインポートする
 
 - ディレクトリ構成に注意する
 
 ```scss
+// style.scss
 @import '../../node_modules/bootstrap/scss/bootstrap.scss'; // 追記する
-@import 'foundation/**';
-@import 'layout/**';
 ```

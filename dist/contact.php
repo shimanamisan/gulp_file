@@ -87,74 +87,75 @@ require "head.php"
 ?>
 
 <body>
-  <div class="container">
-    <div class="navbar">
-      <h1>お問い合わせフォーム</h1>
-    </div>
-    <form class="form-horizontal" method="post" action="">
-      <div class="form-group">
-        <label class="col-sm-2 control-label">お名前 <span class="label label-danger">必須</span></label>
-        <div class="col-sm-10">
-          <input type="text" name="SecondName" class="form-control" placeholder="姓" />
-            <div class="c-error__msg">
-            <?php if (!empty($err_msg["SecondName"])) {
+    <div class="container">
+        <div class="navbar">
+            <h1>お問い合わせフォーム</h1>
+        </div>
+        <form class="form-horizontal" method="post" action="">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">お名前 <span class="label label-danger">必須</span></label>
+                <div class="col-sm-10">
+                    <input type="text" name="SecondName" class="form-control" placeholder="姓" />
+                    <div class="c-error__msg">
+                        <?php if (!empty($err_msg["SecondName"])) {
     echo sanitize("お名前は") . $err_msg["SecondName"];
 } ?>
-            </div>
-          <input type="text" name="FirstName" class="form-control" placeholder="名"  />
-            <div class="c-error__msg">
-            <?php if (!empty($err_msg["FirstName"])) {
+                    </div>
+                    <input type="text" name="FirstName" class="form-control" placeholder="名" />
+                    <div class="c-error__msg">
+                        <?php if (!empty($err_msg["FirstName"])) {
     echo sanitize("お名前は") . $err_msg["FirstName"];
 } ?>
+                    </div>
+                </div>
             </div>
-        </div>
-      </div>
 
-      <div class="form-group">
-        <label class="col-sm-2 control-label">メールアドレス <span class="label label-danger">必須</span></label>
-        <div class="col-sm-10">
-          <input type="email" name="email" class="form-control " placeholder="メールアドレス" value="<?php echo getFormData("email"); ?>"  />
-          <div class="c-error__msg">
-                  <?php if (!empty($err_msg["email"])) {
+            <div class="form-group">
+                <label class="col-sm-2 control-label">メールアドレス <span class="label label-danger">必須</span></label>
+                <div class="col-sm-10">
+                    <input type="email" name="email" class="form-control " placeholder="メールアドレス"
+                        value="<?php echo getFormData("email"); ?>" />
+                    <div class="c-error__msg">
+                        <?php if (!empty($err_msg["email"])) {
     echo sanitize("メールアドレスは") . $err_msg["email"];
 } ?>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-2 control-label"> 件名 <span class="label label-danger">必須</span></label>
-        <div class="col-sm-10">
-          <input type="text" name="subject" class="form-control" placeholder="件名"  />
-          <div class="c-error__msg c-error__text--contact">
-                  <?php if (!empty($err_msg["contact"])) {
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> 件名 <span class="label label-danger">必須</span></label>
+                <div class="col-sm-10">
+                    <input type="text" name="subject" class="form-control" placeholder="件名" />
+                    <div class="c-error__msg c-error__text--contact">
+                        <?php if (!empty($err_msg["contact"])) {
     echo sanitize("件名は") . $err_msg["contact"];
 } ?>
-        </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-2 control-label"> お問い合わせ内容 <span class="label label-danger">必須</span></label>
-        <div class="col-sm-10">
-          <textarea name="contact" class="form-control <?php if (
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> お問い合わせ内容 <span class="label label-danger">必須</span></label>
+                <div class="col-sm-10">
+                    <textarea name="contact" class="form-control <?php if (
                         !empty($err_msg["contact"])
                     ) {
     echo "c-error";
 } ?>" placeholder="お問い合わせ内容" cols="10" rows="7"></textarea>
-        <div class="c-error__msg c-error__text--contact">
-                  <?php if (!empty($err_msg["contact"])) {
+                    <div class="c-error__msg c-error__text--contact">
+                        <?php if (!empty($err_msg["contact"])) {
     echo sanitize("お問い合わせ内容は") . $err_msg["contact"];
 } ?>
-        </div>
-        </div>
-      </div>
-      <div class="form-group" >
-        <div class="col-sm-offset-2 col-sm-10">
-          <input type="submit" class="btn btn-default" value="確認する" onclick="return sendContact()">
-        </div>
-      </div>
-    </form>
-  </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" class="btn btn-default" value="確認する" onclick="return sendContact()">
+                </div>
+            </div>
+        </form>
+    </div>
 
-  <?php
+    <?php
 require "footer.php"
 ?>

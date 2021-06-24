@@ -108,19 +108,19 @@ require "head.php"
 ?>
 
 <body>
-  <div class="container">
-    <div class="navbar">
-      <h1 id="finish">送信完了</h1>
-    </div>
-    <form class="form-horizontal" method="post" action="">
-        <h2>トップページへ戻ります。</h2>
-      <div class="form-group" >
-        <div class="col-sm-offset-2 col-sm-10">
-          <a href="index.php">トップページへ戻る</a>
+    <div class="container">
+        <div class="navbar">
+            <h1 id="finish">送信完了</h1>
         </div>
-      </div>
-    </form>
-  </div>
-  <?php
+        <form class="form-horizontal" method="post" action="">
+            <h2>トップページへ戻ります。</h2>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <a href="index.php">トップページへ戻る</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <?php
 require "footer.php"
 ?>

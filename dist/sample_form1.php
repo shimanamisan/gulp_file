@@ -5,8 +5,9 @@ require "head.php"
 <body>
 
     <div class="l-main">
+        <h1>サンプルフォーム</h1>
         <div class="container">
-            <button class="btn btn-primary" onclick="location.href='bootstrap.php'">Bootstrap</button>
+
         </div>
     </div>
 

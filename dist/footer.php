@@ -1,3 +1,4 @@
 <script src="js/bundle.min.js"></script>
-  </body>
+</body>
+
 </html>

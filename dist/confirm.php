@@ -90,59 +90,59 @@ require "head.php"
 ?>
 
 <body>
-  <div class="container">
-    <div class="navbar">
-      <h1>内容確認</h1>
-    </div>
-   
-    <form class="form-horizontal" method="post" action="finish.php">
-    <input type="hidden" name="csrf_token" value="<?php echo sanitize(
+    <div class="container">
+        <div class="navbar">
+            <h1>内容確認</h1>
+        </div>
+
+        <form class="form-horizontal" method="post" action="finish.php">
+            <input type="hidden" name="csrf_token" value="<?php echo sanitize(
               $_SESSION['csrf_token']
             ); ?>">
-      <div class="form-group">
-        <label class="col-sm-2 control-label">お名前</label>
-        <div class="col-sm-10">
-          <ul class="list-group">
-              <li class="list-group-item"><?php echo sanitize($_SESSION['SecondName']); ?></li>
-              <li class="list-group-item"><?php echo sanitize($_SESSION['FirstName']); ?></li>
-          </ul>
-        </div>
-      </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">お名前</label>
+                <div class="col-sm-10">
+                    <ul class="list-group">
+                        <li class="list-group-item"><?php echo sanitize($_SESSION['SecondName']); ?></li>
+                        <li class="list-group-item"><?php echo sanitize($_SESSION['FirstName']); ?></li>
+                    </ul>
+                </div>
+            </div>
 
-      <div class="form-group">
-        <label class="col-sm-2 control-label">メールアドレス </label>
-        <div class="col-sm-10">
-            <ul class="list-group">
-              <li class="list-group-item"> <?php echo sanitize($_SESSION["email"]); ?></li>
-            </ul>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-2 control-label"> 件名 </label>
-        <div class="col-sm-10">
-        <ul class="list-group">
-              <li class="list-group-item"> <?php echo sanitize($_SESSION["subject"]); ?></li>
-        </ul>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-2 control-label"> お問い合わせ内容</label>
-        <div class="col-sm-10">
-        <ul class="list-group">
-              <li class="list-group-item"><?php echo sanitize($_SESSION["contact"]); ?></li>
-        </ul>
-        </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">メールアドレス </label>
+                <div class="col-sm-10">
+                    <ul class="list-group">
+                        <li class="list-group-item"> <?php echo sanitize($_SESSION["email"]); ?></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> 件名 </label>
+                <div class="col-sm-10">
+                    <ul class="list-group">
+                        <li class="list-group-item"> <?php echo sanitize($_SESSION["subject"]); ?></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> お問い合わせ内容</label>
+                <div class="col-sm-10">
+                    <ul class="list-group">
+                        <li class="list-group-item"><?php echo sanitize($_SESSION["contact"]); ?></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" class="btn btn-default" value="送信する" onclick="return sendContact()">
+                </div>
+                <a href="">戻る</a>
+            </div>
+        </form>
     </div>
-    <div class="form-group" >
-        <div class="col-sm-offset-2 col-sm-10">
-        <input type="submit" class="btn btn-default" value="送信する" onclick="return sendContact()">
-        </div>
-        <a href="">戻る</a>
-    </div>
-    </form>
-  </div>
-  
 
-  <?php
+
+    <?php
 require "footer.php"
 ?>
